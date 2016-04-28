@@ -5,8 +5,7 @@ version := "1.0"
 scalaVersion := "2.10.6"
 
 libraryDependencies ++= Seq(
-  "org.apache.hadoop" % "hadoop-mapreduce-client-core" % "2.7.2" % "provided",
-  "org.apache.hadoop" % "hadoop-common" % "2.7.2" % "provided" intransitive()
+  "org.apache.spark" % "spark-core_2.10" % "1.6.1" % "provided"
 )
 
 import scalariform.formatter.preferences._
@@ -17,4 +16,4 @@ scalariformPreferences := scalariformPreferences.value
   .setPreference(DoubleIndentClassDeclaration, true)
 
 
-assemblyJarName in assembly := "tk-wordcount.jar"
+assemblyJarName in assembly := "tk-spark-wordcount.jar"
